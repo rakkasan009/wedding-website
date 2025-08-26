@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amro Alshamari & Fatima Seoud Wedding</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+    
+    header {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+      text-align: center;
+      padding: 100px 20px;
+      color: white;
+    }
+    
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      color: #d4af37;
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    }
+    
+    .divider {
+      width: 100px;
+      height: 3px;
+      background: #d4af37;
+      margin: 20px auto;
+    }
+    
+    .countdown {
+      display: flex;
+      justify-content: center;
+      margin: 40px 0;
+      flex-wrap: wrap;
+    }
+    
+    .countdown-item {
+      margin: 0 15px;
+      text-align: center;
+      min-width: 100px;
+    }
+    
+    .countdown-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #d4af37;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .countdown-label {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #fff;
+    }
+    
+    section {
+      padding: 60px 20px;
+    }
+    
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .story {
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+    
+    .story-content {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    
+    .story-image {
+      width: 100%;
+      max-width: 600px;
+      height: 400px;
+      margin: 30px auto;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .story-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .story-image:hover img {
+      transform: scale(1.05);
+    }
+    
+    .details {
+      background-color: #fff;
+    }
+    
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      position: relative;
+    }
+    
+    .section-title:after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: #d4af37;
+    }
+    
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+    
+    .card {
+      background: #f9f9f9;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+      transition: transform 0.3s;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .card i {
+      font-size: 2.5rem;
+      color: #d4af37;
+      margin-bottom: 20px;
+    }
+    
+    .card h3 {
+      margin: 0 0 15px 0;
+      font-family: 'Playfair Display', serif;
+      color: #333;
+    }
+    
+    .card p {
+      margin: 8px 0;
+      color: #555;
+    }
+    
+    .address-link {
+      color: #333;
+      text-decoration: none;
+      transition: color 0.3s;
+      font-weight: 500;
+    }
+    
+    .address-link:hover {
+      color: #d4af37;
+      text-decoration: underline;
+    }
+    
+    .rsvp {
+      background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwa90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=80');
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+    }
+    
+    .adults-notice {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 30px auto;
+      text-align: center;
+      border-left: 4px solid #d4af37;
+      max-width: 600px;
+    }
+    
+    .adults-notice p {
+      margin-bottom: 10px;
+      font-style: italic;
+    }
+    
+    .adults-notice .arabic {
+      font-size: 1.2rem;
+      color: #5a3e2b;
+      direction: rtl;
+    }
+    
+    .btn {
+      display: inline-block;
+      background: #d4af37;
+      color: #fff;
+      padding: 15px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-top: 20px;
+      transition: all 0.3s;
+      border: 2px solid #d4af37;
+    }
+    
+    .btn:hover {
+      background: transparent;
+      color: #d4af37;
+    }
+    
+    footer {
+      background: #f9f9f9;
+      text-align: center;
+      padding: 40px 20px;
+      color: #555;
+      border-top: 1px solid #eee;
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      
+      .countdown-item {
+        margin: 10px;
+        min-width: 80px;
+      }
+      
+      .countdown-number {
+        font-size: 2rem;
+        padding: 10px;
+      }
+      
+      .section-title {
+        font-size: 2rem;
+      }
+      
+      .story-image {
+        height: 300px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      header {
+        padding: 80px 20px;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .countdown {
+        margin: 20px 0;
+      }
+      
+      .countdown-item {
+        margin: 5px;
+        min-width: 70px;
+      }
+      
+      .countdown-number {
+        font-size: 1.8rem;
+        padding: 8px;
+      }
+      
+      .countdown-label {
+        font-size: 0.8rem;
+      }
+      
+      .section-title {
+        font-size: 1.8rem;
+      }
+      
+      .story-image {
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Amro Alshamari & Fatima Seoud</h1>
+      <div class="divider"></div>
+      <p>Sunday, October 5, 2025 • 6:30 PM – 11:00 PM</p>
+      <p>Andre's at Palladium • St. Louis, Missouri</p>
+      
+      <!-- Countdown Timer -->
+      <div class="countdown">
+        <div class="countdown-item">
+          <div class="countdown-number" id="days">00</div>
+          <div class="countdown-label">Days</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-number" id="hours">00</div>
+          <div class="countdown-label">Hours</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-number" id="minutes">00</div>
+          <div class="countdown-label">Minutes</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-number" id="seconds">00</div>
+          <div class="countdown-label">Seconds</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="story">
+    <div class="container">
+      <div class="story-content">
+        <p>From the moment they met, Amro and Fatima knew they had found something truly special. Their journey has been filled with laughter, love, and countless adventures. After many wonderful years together, they decided to make it forever.</p>
+        
+        <div class="story-image">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80" alt="Amro & Fatima">
+        </div>
+        
+        <p>They are overjoyed to celebrate their union with family and friends and cannot wait to begin this new chapter of their lives as husband and wife.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="details">
+    <div class="container">
+      <h2 class="section-title">Wedding Details</h2>
+      <div class="cards">
+        <div class="card">
+          <i class="far fa-calendar-alt"></i>
+          <h3>When</h3>
+          <p>Sunday, October 5, 2025</p>
+          <p>6:30 PM – 11:00 PM</p>
+        </div>
+        
+        <div class="card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>Where</h3>
+          <p>Andre's at Palladium</p>
+          <p><a href="https://www.google.com/maps/place/1400+Park+Pl,+St.+Louis,+MO+63104" class="address-link" target="_blank" rel="noopener">1400 Park Place, St. Louis, MO 63104</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rsvp">
+    <div class="container">
+      <h2 class="section-title">RSVP</h2>
+      <p>Seats have been reserved in your honor. Please let us know if you will be joining us!</p>
+      
+      <!-- Adults Only Notice -->
+      <div class="adults-notice">
+        <p class="arabic">نود أن نلفت انتباهكم إلى أن حفل الزفاف سيكون للبالغين فقط.</p>
+        <p>Please note this will be an adults-only celebration. No children are allowed to attend the reception.</p>
+      </div>
+      
+      <p>We kindly request your response by September 1, 2025</p>
+      <a class="btn" href="mailto:amro.alshamari@gmail.com?subject=Wedding RSVP — Amro & Fatima&body=Dear Amro and Fatima,%0D%0A%0D%0AWe will attend your wedding on October 5, 2025.%0D%0AName(s):%0D%0ANumber of guests:%0D%0ADietary restrictions or special requests:%0D%0A">RSVP by Email</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Amro Alshamari & Fatima Seoud • Thank you for being part of our special day.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Countdown timer for the wedding
+    function updateCountdown() {
+      // Set the wedding date (October 5, 2025 at 6:30 PM)
+      const weddingDate = new Date('October 5, 2025 18:30:00').getTime();
+      
+      // Get current time
+      const now = new Date().getTime();
+      
+      // Calculate the difference
+      const difference = weddingDate - now;
+      
+      // Calculate time units
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+      
+      // Update the countdown display
+      document.getElementById('days').textContent = days.toString().padStart(2, '0');
+      document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+      document.getElementById('minutes').text content = minutes.toString().padStart(2, '0');
+      document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+      
+      // If the countdown is over
+      if (difference < 0) {
+        clearInterval(countdownTimer);
+        document.getElementById('days').textContent = '00';
+        document.getElementById('hours').textContent = '00';
+        document.getElementById('minutes').textContent = '00';
+        document.getElementById('seconds').textContent = '00';
+      }
+    }
+    
+    // Initial call to set the countdown
+    updateCountdown();
+    
+    // Update the countdown every second
+    const countdownTimer = setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
